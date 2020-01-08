@@ -73,6 +73,8 @@ public class UserController {
             }else {
                 response.sendRedirect("/admin/index.page");
             }
+            //不return则会继续往后重定向到signin.jsp
+            return;
         }
         //login fail
         request.setAttribute("error",errorMsg);
