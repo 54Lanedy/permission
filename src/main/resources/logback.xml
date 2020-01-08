@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--scan="true":自动部署此配置文件；scanPeriod="60 seconds"：监测配置文件是否有修改的时间间隔，默认一分钟-->
+<configuration scan="true" scanPeriod="60 seconds">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n}</pattern>
+        </encoder>
+    </appender>
+
+    <!--<appender name="permission" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<file>%{catalina.home}/logs/permission.log</file>-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--<fileNamePattern>%{catalina.home}/logs/permission.%d{yyyy-MM-dd}.log.gz</fileNamePattern>-->
+        <!--</rollingPolicy>-->
+        <!--<layout class="ch.qos.logback.classic.PatternLayout">-->
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS [%thread] %-5level %logger - %msg%n}</pattern>-->
+        <!--</layout>-->
+    <!--</appender>-->
+    <!--<logger name="xxx" level="INFO">-->
+        <!--<appender-ref ref="permission"/>-->
+    <!--</logger>-->
+
+
+
+    <!--TRACE < DEBUG <INFO <WARN <ERROR-->
+    <root>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
